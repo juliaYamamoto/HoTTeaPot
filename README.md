@@ -27,10 +27,10 @@ This first draft was made using keynote.
 Each type have a different color.     
 ![image with the colors used on the app](readmeImages/colors.png)
 
-#### 🔡 Font.    
+#### 🔡 Font
 [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab) designed by Christian Robertson under the [Apache License, Version 2.0.](http://www.apache.org/licenses/LICENSE-2.0).    
 
-#### 📱screens.    
+#### 📱Screens
 **Main screen**.            
 Show a table view with all the status code separated in sections by type. The user can search for a specific one by **type**, **code** or **title** 
 
