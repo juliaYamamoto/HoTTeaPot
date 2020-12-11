@@ -17,7 +17,7 @@ The json have an **array of dictionaries**. Each one have a **key** string with 
 &nbsp;&nbsp; **code:** status code. *e.g.: 418*.    
 &nbsp;&nbsp; **title:** status title. *e.g.: I'm a teapot*.    
 &nbsp;&nbsp; **description:** a small description. *e.g.: Any attempt to brew coffee with a teapot should result in the error code '418 I'm a teapot'.*.    
-&nbsp;&nbsp; **type:** type of the status code. *e.g.:4×× client error*. (Again. Yes. My json my rules.)      
+&nbsp;&nbsp; **type:** type of the status code. *e.g.:4×× client error*.    
 &nbsp;&nbsp; **source:** reference code and section. *e.g.:RFC2324 Ssection 2.3.2*.    
 
 ### General look - first draft
