@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2318E5F1258405E600E1DEA2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318E5F0258405E600E1DEA2 /* Constants.swift */; };
+		2318E5F72584067C00E1DEA2 /* httpStatusCode.json in Resources */ = {isa = PBXBuildFile; fileRef = 2318E5F62584067C00E1DEA2 /* httpStatusCode.json */; };
 		239598722583273F00C05930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239598712583273F00C05930 /* AppDelegate.swift */; };
 		239598742583273F00C05930 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239598732583273F00C05930 /* SceneDelegate.swift */; };
 		239598762583273F00C05930 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239598752583273F00C05930 /* MainViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2318E5F0258405E600E1DEA2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2318E5F62584067C00E1DEA2 /* httpStatusCode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = httpStatusCode.json; path = ../../../../../Desktop/httpStatusCode.json; sourceTree = "<group>"; };
 		2395986E2583273F00C05930 /* HTTeaPot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTeaPot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239598712583273F00C05930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239598732583273F00C05930 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2318E5F52584066200E1DEA2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2318E5F62584067C00E1DEA2 /* httpStatusCode.json */,
+				2395987A2583274200C05930 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		2318E5FC258423F300E1DEA2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		239598652583273F00C05930 = {
 			isa = PBXGroup;
 			children = (
@@ -107,9 +127,9 @@
 				239598A52583275300C05930 /* Views */,
 				239598A42583274F00C05930 /* Models */,
 				239598AA2583277200C05930 /* Utils */,
+				2318E5F52584066200E1DEA2 /* Assets */,
 				239598712583273F00C05930 /* AppDelegate.swift */,
 				239598732583273F00C05930 /* SceneDelegate.swift */,
-				2395987A2583274200C05930 /* Assets.xcassets */,
 				2395987F2583274200C05930 /* Info.plist */,
 			);
 			path = HTTeaPot;
@@ -159,6 +179,8 @@
 		239598AA2583277200C05930 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2318E5FC258423F300E1DEA2 /* Extensions */,
+				2318E5F0258405E600E1DEA2 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -268,6 +290,7 @@
 			files = (
 				2395987E2583274200C05930 /* LaunchScreen.storyboard in Resources */,
 				2395987B2583274200C05930 /* Assets.xcassets in Resources */,
+				2318E5F72584067C00E1DEA2 /* httpStatusCode.json in Resources */,
 				239598792583273F00C05930 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2318E5F1258405E600E1DEA2 /* Constants.swift in Sources */,
 				239598762583273F00C05930 /* MainViewController.swift in Sources */,
 				239598722583273F00C05930 /* AppDelegate.swift in Sources */,
 				239598AF258327F000C05930 /* StatusCode.swift in Sources */,
