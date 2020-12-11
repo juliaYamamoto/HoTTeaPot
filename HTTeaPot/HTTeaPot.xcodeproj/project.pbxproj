@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2318E5F1258405E600E1DEA2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318E5F0258405E600E1DEA2 /* Constants.swift */; };
 		2318E5F72584067C00E1DEA2 /* httpStatusCode.json in Resources */ = {isa = PBXBuildFile; fileRef = 2318E5F62584067C00E1DEA2 /* httpStatusCode.json */; };
+		2318E6092584270700E1DEA2 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318E6082584270700E1DEA2 /* JsonParser.swift */; };
 		239598722583273F00C05930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239598712583273F00C05930 /* AppDelegate.swift */; };
 		239598742583273F00C05930 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239598732583273F00C05930 /* SceneDelegate.swift */; };
 		239598762583273F00C05930 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239598752583273F00C05930 /* MainViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		2318E5F0258405E600E1DEA2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2318E5F62584067C00E1DEA2 /* httpStatusCode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = httpStatusCode.json; path = ../../../../../Desktop/httpStatusCode.json; sourceTree = "<group>"; };
+		2318E6082584270700E1DEA2 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		2395986E2583273F00C05930 /* HTTeaPot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTeaPot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239598712583273F00C05930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239598732583273F00C05930 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				2318E5FC258423F300E1DEA2 /* Extensions */,
 				2318E5F0258405E600E1DEA2 /* Constants.swift */,
+				2318E6082584270700E1DEA2 /* JsonParser.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			files = (
 				2318E5F1258405E600E1DEA2 /* Constants.swift in Sources */,
 				239598762583273F00C05930 /* MainViewController.swift in Sources */,
+				2318E6092584270700E1DEA2 /* JsonParser.swift in Sources */,
 				239598722583273F00C05930 /* AppDelegate.swift in Sources */,
 				239598AF258327F000C05930 /* StatusCode.swift in Sources */,
 				239598742583273F00C05930 /* SceneDelegate.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UITableViewController  {
     
-    #warning("TODO: replace with data from the status code json")
+//    #warning("TODO: replace with data from the status code json")
 //    var data : [CodeType:[StatusCode]] = [:]
     
     override func viewDidLoad() {
@@ -17,32 +17,40 @@ class MainViewController: UITableViewController  {
 //        createTemporaryValues()
         var newData = buildStatusCodeList()
         
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
     
     func buildStatusCodeList() -> AllStatusCode?{
-        if let fetchedData = fetchData() {
-            if let newData = parseData(jsonData: fetchedData) {
-                print(newData.statusCode)
-            }
-        }
         
-        return nil
+        var aData = JsonParser.from(path: Constants.JSON().fileName, ofType: AllStatusCode.self)
+        return aData
+        
+        
+//        let aData = JsonParser.from(path: Constants.JSON().fileName, ofType: AllStatusCode)
+//
+//        if let fetchedData = fetchData() {
+//            if let newData = parseData(jsonData: fetchedData) {
+//                print(newData.statusCode)
+//            }
+//        }
+//
+//        return nil
     }
     
-    func fetchData() -> Data? {
-        do {
-            if let path = Bundle.main.path(forResource: Constants.JSON().fileName, ofType: "json") {
-               let jsonData = try String(contentsOfFile: path).data(using: .utf8)
-                return jsonData
+        func fetchData() -> Data? {
+            do {
+                if let path = Bundle.main.path(forResource: Constants.JSON().fileName, ofType: "json") {
+                   let jsonData = try String(contentsOfFile: path).data(using: .utf8)
+                    return jsonData
+                }
+            } catch {
+                print(error)
             }
-        } catch {
-            print(error)
+            
+            return nil
         }
-        
-        return nil
-    }
     
     func parseData(jsonData: Data) -> AllStatusCode?{
         do {

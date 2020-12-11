@@ -20,5 +20,4 @@ class Constants: NSObject {
         let clientError: String = "4xx client error"
         let serverError: String = "5xx server error"
     }
-    
 }
