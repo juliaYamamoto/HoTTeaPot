@@ -27,8 +27,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="y4h-cP-tkx" id="WYd-u8-YyF"/>
-                            <outlet property="delegate" destination="y4h-cP-tkx" id="Jg5-aC-fra"/>
+                            <outlet property="dataSource" destination="y4h-cP-tkx" id="6rn-Q3-HVV"/>
+                            <outlet property="delegate" destination="y4h-cP-tkx" id="WSh-Mm-t2e"/>
                         </connections>
                     </tableView>
                 </tableViewController>
