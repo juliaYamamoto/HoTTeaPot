@@ -13,11 +13,4 @@ class Constants: NSObject {
         let fileName: String = "httpStatusCode"
     }
     
-    public struct TypeName {
-        let informational: String = "1xx informational"
-        let success: String = "2xx success"
-        let redirection: String = "3xx redirection"
-        let clientError: String = "4xx client error"
-        let serverError: String = "5xx server error"
-    }
 }

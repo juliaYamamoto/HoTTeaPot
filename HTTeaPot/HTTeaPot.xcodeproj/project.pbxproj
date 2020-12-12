@@ -93,13 +93,6 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		2318E5FC258423F300E1DEA2 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		239598652583273F00C05930 = {
 			isa = PBXGroup;
 			children = (
@@ -123,11 +116,9 @@
 		239598702583273F00C05930 /* HTTeaPot */ = {
 			isa = PBXGroup;
 			children = (
-				2395987C2583274200C05930 /* LaunchScreen.storyboard */,
-				239598772583273F00C05930 /* Main.storyboard */,
-				239598A92583275D00C05930 /* Controllers */,
-				239598A52583275300C05930 /* Views */,
 				239598A42583274F00C05930 /* Models */,
+				239598A52583275300C05930 /* Views */,
+				239598A92583275D00C05930 /* Controllers */,
 				239598AA2583277200C05930 /* Utils */,
 				2318E5F52584066200E1DEA2 /* Assets */,
 				239598712583273F00C05930 /* AppDelegate.swift */,
@@ -166,6 +157,8 @@
 		239598A52583275300C05930 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2395987C2583274200C05930 /* LaunchScreen.storyboard */,
+				239598772583273F00C05930 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,7 +174,6 @@
 		239598AA2583277200C05930 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2318E5FC258423F300E1DEA2 /* Extensions */,
 				2318E5F0258405E600E1DEA2 /* Constants.swift */,
 				2318E6082584270700E1DEA2 /* JsonParser.swift */,
 			);

@@ -7,13 +7,34 @@
 
 import Foundation
 
-enum CodeType: String, Codable{
-    case informational  = "1xx informational"
-    case success        = "2xx success"
-    case redirection    = "3xx redirection"
-    case clientError    = "4xx client error"
-    case serverError    = "5xx server error"
-}
+enum CodeType: String{
+    case informational  = "1×× informational"
+    case success        = "2×× success"
+    case redirection    = "3×× redirection"
+    case clientError    = "4×× client error"
+    case serverError    = "5×× server error"
+    
+    static func getTypeFromOrder(number: Int) -> CodeType {
+        switch number {
+        case 0:
+            return CodeType.informational
+        case 1:
+            return CodeType.success
+        case 2:
+            return CodeType.redirection
+        case 3:
+            return CodeType.clientError
+        case 4:
+            return CodeType.serverError
+        default:
+            return CodeType.informational // TODO - improve
+        }
+    }
+    
+    static func count() -> Int {
+        return 5 // TODO - improve
+    }
+ }
 
 struct StatusCode: Codable {
     let code: String
@@ -25,5 +46,16 @@ struct StatusCode: Codable {
 
 struct AllStatusCode: Codable {
     let statusCode: [StatusCode]
+    
+    func getAllOfType(_ typeName: String) -> [StatusCode]{
+        var typeList: [StatusCode] = []
+        
+        for item in statusCode {
+            if item.type == typeName {
+                typeList.append(item)
+            }
+        }
+        
+        return typeList
+    }
 }
-
