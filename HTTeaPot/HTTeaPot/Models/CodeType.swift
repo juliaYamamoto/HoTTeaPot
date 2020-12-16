@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CodeType: String {
+enum CodeType: String, CaseIterable {
     
     // MARK: - Cases
     
@@ -20,29 +20,21 @@ enum CodeType: String {
     
     // MARK: - Methods
     
-    static func getTypeFromOrder(number: Int) -> CodeType {
-        switch number {
-        case 0:
-            return CodeType.informational
-        case 1:
-            return CodeType.success
-        case 2:
-            return CodeType.redirection
-        case 3:
-            return CodeType.clientError
-        case 4:
-            return CodeType.serverError
-        default:
-            return CodeType.informational // TODO - improve
+    static func getTypeFromOrder(number: Int) -> CodeType? {
+        if number < self.count() {
+            return CodeType.allCases[number]
         }
+        return nil
     }
     
-    static func getTypeFromName(_ name: String) -> CodeType {
-        //TODO
-        return CodeType.informational
+    static func getTypeFromName(_ name: String) -> CodeType? {
+        if let type = CodeType(rawValue: name) {
+            return type
+        }
+        return nil
     }
     
     static func count() -> Int {
-        return 5 // TODO - improve
+        return CodeType.allCases.count
     }
  }

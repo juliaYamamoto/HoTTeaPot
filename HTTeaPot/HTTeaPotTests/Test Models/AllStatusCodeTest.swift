@@ -44,30 +44,30 @@ class AllStatusCodeTest: XCTestCase {
         XCTAssertNotNil(sut.statusCode)
     }
     
-    func testInit_ShouldInitializeWith_CorrectCountForElements() {
+    func testInit_ShouldInitializeWithCorrectCount_ForElements() {
         XCTAssertEqual(sut.statusCode.count, numberOfelements)
     }
     
     
     // MARK: - Test: getAllOfType()
     
-    func testInit_ShouldGet_CorrectCountForElementsOfTypeInformational() {
+    func testType_ShouldGetCorrectCount_ForElementsOfTypeInformational() {
         XCTAssertEqual(sut.getAllOfType("1xx informational").count, numberOfelementsOfTypeInformational)
     }
     
-    func testInit_ShouldGet_CorrectCountForElementsOfTypeSuccess() {
+    func testType_ShouldGetCorrectCount_ForElementsOfTypeSuccess() {
         XCTAssertEqual(sut.getAllOfType("2xx success").count, numberOfelementsOfTypeSuccess)
     }
     
-    func testInit_ShouldGet_CorrectCountForElementsOfTypeRedirection() {
+    func testType_ShouldGetCorrectCount_ForElementsOfTypeRedirection() {
         XCTAssertEqual(sut.getAllOfType("3xx redirection").count, numberOfelementsOfTypeRedirection)
     }
     
-    func testInit_ShouldGet_CorrectCountForElementsOfTypeClientError() {
+    func testType_ShouldGetCorrectCount_ForElementsOfTypeClientError() {
         XCTAssertEqual(sut.getAllOfType("4xx client error").count, numberOfelementsOfTypeClientError)
     }
     
-    func testInit_ShouldGet_CorrectCountForElementsOfTypeServerError() {
+    func testType_ShouldGetCorrectCount_ForElementsOfTypeServerError() {
         XCTAssertEqual(sut.getAllOfType("5xx server error").count, numberOfelementsOfTypeServerError)
     }
 }

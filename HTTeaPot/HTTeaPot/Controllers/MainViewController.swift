@@ -33,7 +33,7 @@ class MainViewController: UITableViewController  {
             statusCodeList = data
         }
     }
-    
+
     
     // MARK: - UITableViewController
     
@@ -42,21 +42,30 @@ class MainViewController: UITableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return CodeType.getTypeFromOrder(number: section).rawValue
+        if let section = CodeType.getTypeFromOrder(number: section) {
+            return section.rawValue
+        }
+        return ""
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let typeNameOfSection = CodeType.getTypeFromOrder(number: section).rawValue
-        let elements = statusCodeList.getAllOfType(typeNameOfSection)
+        if let typeNameOfSection = CodeType.getTypeFromOrder(number: section) {
+            let elements = statusCodeList.getAllOfType(typeNameOfSection.rawValue)
+            return elements.count
+        }
         
-        return elements.count
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let typeNameOfSection = CodeType.getTypeFromOrder(number: indexPath.section).rawValue
-        let element = statusCodeList.getAllOfType(typeNameOfSection)[indexPath.row]
-        
         let cell = UITableViewCell()
+        
+        guard let typeNameOfSection = CodeType.getTypeFromOrder(number: indexPath.section) else {
+            print("Something is wrong") //TODO - Better return
+            return cell
+        }
+        
+        let element = statusCodeList.getAllOfType(typeNameOfSection.rawValue)[indexPath.row]
         cell.textLabel?.text = "\(element.code) - \(element.title)"
         
         return cell
