@@ -10,12 +10,12 @@ import UIKit
 class MainViewController: UITableViewController  {
     
     
-    // Mark: - Properties
+    // MARK: - Properties
     
     var statusCodeList = AllStatusCode(statusCode: [])
     
     
-    // Mark: - Lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class MainViewController: UITableViewController  {
     }
     
     
-    // Mark: - Status Code
+    // MARK: - Status Code
     
     func fetchStatusList(){
         if let data = JsonParser.from(path: Constants.JSON().fileName, ofType: AllStatusCode.self) {
@@ -35,7 +35,7 @@ class MainViewController: UITableViewController  {
     }
     
     
-    // Mark: - UITableViewController
+    // MARK: - UITableViewController
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return CodeType.count()
