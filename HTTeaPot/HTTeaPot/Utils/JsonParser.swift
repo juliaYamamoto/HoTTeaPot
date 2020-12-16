@@ -10,7 +10,9 @@ import Foundation
 class JsonParser {
     
     static func from<T: Codable> (path: String, ofType: T.Type) -> T? {
-        guard let jsonPath = Bundle.main.path(forResource: path, ofType: "json") else { return nil}
+        guard let jsonPath = Bundle.main.path(forResource: path, ofType: "json") else {
+            return nil
+        }
         
         do {
             guard let jsonData = try String(contentsOfFile: jsonPath).data(using: .utf8) else {

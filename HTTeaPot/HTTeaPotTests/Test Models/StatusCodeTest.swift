@@ -11,9 +11,12 @@ import XCTest
 class StatusCodeTest: XCTestCase {
 
     // MARK: - Properties
+    
     var sut: StatusCode!
     
-    // MARK: - Mock Properties
+    
+    // MARK: - Test Properties
+    
     let testCode: String = "418"
     let testTitle: String = "I'm a NOT teapot"
     let testDescription: String = "Test description"
@@ -22,6 +25,7 @@ class StatusCodeTest: XCTestCase {
     
     
     // MARK: - Set up and Tear down
+    
     override func setUp() {
         super.setUp()
         sut = StatusCode(code: testCode, title: testTitle, description: testDescription, type: testType, source: testSource)
@@ -31,7 +35,9 @@ class StatusCodeTest: XCTestCase {
         super.tearDown()
     }
     
+    
     // MARK: - Test: Initialization
+    
     func testInit_ShouldNotBeNil() {
         XCTAssertNotNil(sut)
     }

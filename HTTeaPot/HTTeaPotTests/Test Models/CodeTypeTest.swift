@@ -9,25 +9,10 @@ import XCTest
 @testable import HTTeaPot
 
 class CodeTypeTest: XCTestCase {
-
-    // MARK: - Properties
     
-    
-    // MARK: - Mock Properties
-    
-    
-    
-    // MARK: - Set up and Tear down
-    
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
     
     // MARK: - Test: Cases
+    
     func testCases_RawValues() {
         XCTAssertEqual(CodeType.informational.rawValue, "1xx informational")
         XCTAssertEqual(CodeType.success.rawValue, "2xx success")
@@ -38,6 +23,7 @@ class CodeTypeTest: XCTestCase {
     
     
     // MARK: - Test: getTypeFromOrder
+    
     func testTypeFromOrder_ShouldReturnNotNil_ForNumbersBetween0And4() {
         XCTAssertNotNil(CodeType.getTypeFromOrder(number: 0))
         XCTAssertNotNil(CodeType.getTypeFromOrder(number: 1))

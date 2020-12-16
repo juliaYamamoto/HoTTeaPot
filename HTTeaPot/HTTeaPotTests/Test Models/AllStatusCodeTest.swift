@@ -15,7 +15,7 @@ class AllStatusCodeTest: XCTestCase {
     var sut: AllStatusCode!
     
     
-    // MARK: - Mock Properties
+    // MARK: - Test Properties
     
     let numberOfelements: Int = 10
     let numberOfelementsOfTypeInformational: Int = 3
@@ -49,7 +49,7 @@ class AllStatusCodeTest: XCTestCase {
     }
     
     
-    // MARK: - Test: getAllOfType()
+    // MARK: - Test: getAllOfType
     
     func testType_ShouldGetCorrectCount_ForElementsOfTypeInformational() {
         XCTAssertEqual(sut.getAllOfType("1xx informational").count, numberOfelementsOfTypeInformational)
