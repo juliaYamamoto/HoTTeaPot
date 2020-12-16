@@ -10,12 +10,6 @@ import XCTest
 
 class JsonParserTest: XCTestCase {
 
-    // MARK: - Properties
-    
-    
-    // MARK: - Test Properties
-    
-    
     // MARK: - Set up and Tear down
     
     override func setUp() {
@@ -33,15 +27,15 @@ class JsonParserTest: XCTestCase {
         XCTAssertNil(JsonParser.from(path: "fakeFileName", ofType: AllStatusCode.self))
     }
     
-    func testFrom_ShouldNotReturn_ForExistingPath() {
+    func testFrom_ShouldNotReturnNil_ForExistingPath() {
         XCTAssertNotNil(JsonParser.from(path: Constants.JSON().fileName, ofType: AllStatusCode.self))
+    }
+    
+    func testFrom_ShouldReturnNil_WhenInvalidJson() {
+        XCTAssertNil(JsonParser.from(path: "testFile", ofType: AllStatusCode.self))
     }
     
     func testFrom_ShouldReturnNil_WhenInvalidCodable() {
         XCTAssertNil(JsonParser.from(path: Constants.JSON().fileName, ofType: StatusCode.self))
     }
 }
-
-//if let data = JsonParser.from(path: Constants.JSON().fileName, ofType: AllStatusCode.self) {
-//    statusCodeList = data
-//}
