@@ -17,15 +17,7 @@ struct AllStatusCode: Codable {
     // MARK: - Methods
     
     func getAllOfType(_ typeName: String) -> [StatusCode]{
-        var typeList: [StatusCode] = []
-        
-        //TODO - Use FILTER
-        for item in statusCode {
-            if item.type == typeName {
-                typeList.append(item)
-            }
-        }
-        
+        let typeList = statusCode.filter({ return $0.type == typeName})
         return typeList
     }
 }
