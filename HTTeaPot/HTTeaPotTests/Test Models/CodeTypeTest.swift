@@ -14,11 +14,13 @@ class CodeTypeTest: XCTestCase {
     var sut: CodeType!
     
     // MARK: - Mock Properties
-    
+    var dataTest: [CodeType]!
     
     // MARK: - Set up and Tear down
     override func setUp() {
         super.setUp()
+        
+        
     }
     
     override func tearDown() {
