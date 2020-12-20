@@ -1,39 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y4h-cP-tkx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Vo-9z-cfy">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
-        <scene sceneID="o6q-N5-abu">
+        <!--Navigation Controller-->
+        <scene sceneID="fdg-cl-X5n">
             <objects>
-                <tableViewController title="Main" id="y4h-cP-tkx" customClass="MainViewController" customModule="HTTeaPot" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JSx-IZ-V1G">
+                <navigationController id="5Vo-9z-cfy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FBo-yA-lGx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8oB-QW-p7D" kind="relationship" relationship="rootViewController" id="eEf-Ig-xST"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gr9-Up-xLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408" y="52"/>
+        </scene>
+        <!--Status Code-->
+        <scene sceneID="HTr-YB-wEd">
+            <objects>
+                <viewController id="8oB-QW-p7D" customClass="StatusCodeViewController" customModule="HTTeaPot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3JV-LP-gGQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G9c-XH-gpV">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vay-Ly-9dr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DvZ-NU-Tjb">
-                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DvZ-NU-Tjb" id="ogm-GB-iUq">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="y4h-cP-tkx" id="6rn-Q3-HVV"/>
-                            <outlet property="delegate" destination="y4h-cP-tkx" id="WSh-Mm-t2e"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DeM-Wx-g0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="G9c-XH-gpV" firstAttribute="trailing" secondItem="vay-Ly-9dr" secondAttribute="trailing" id="Fp5-GU-dpv"/>
+                            <constraint firstItem="G9c-XH-gpV" firstAttribute="top" secondItem="vay-Ly-9dr" secondAttribute="top" id="dMv-9Y-cnz"/>
+                            <constraint firstItem="G9c-XH-gpV" firstAttribute="leading" secondItem="vay-Ly-9dr" secondAttribute="leading" id="lN5-7X-3eD"/>
+                            <constraint firstItem="G9c-XH-gpV" firstAttribute="bottom" secondItem="vay-Ly-9dr" secondAttribute="bottom" id="oAU-yt-4er"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Status Code" id="Tly-GA-XTm"/>
+                    <connections>
+                        <outlet property="dataService" destination="87l-XI-0Je" id="3LZ-Ix-1CU"/>
+                        <outlet property="statusCodeTableView" destination="G9c-XH-gpV" id="XNe-9d-57K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pce-42-9UJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="87l-XI-0Je" userLabel="DataServiceObject" customClass="StatusCodeDataService" customModule="HTTeaPot" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="652" y="61"/>
+            <point key="canvasLocation" x="2317.5" y="51.760563380281688"/>
         </scene>
     </scenes>
     <resources>
