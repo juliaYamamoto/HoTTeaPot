@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="1408" y="52"/>
         </scene>
-        <!--Status Code-->
+        <!--StatusCode-->
         <scene sceneID="HTr-YB-wEd">
             <objects>
-                <viewController id="8oB-QW-p7D" customClass="StatusCodeViewController" customModule="HTTeaPot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatusCode" title="StatusCode" id="8oB-QW-p7D" customClass="StatusCodeViewController" customModule="HTTeaPot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3JV-LP-gGQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

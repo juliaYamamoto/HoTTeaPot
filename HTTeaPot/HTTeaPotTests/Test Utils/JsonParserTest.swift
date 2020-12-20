@@ -32,7 +32,7 @@ class JsonParserTest: XCTestCase {
     }
     
     func testFrom_ShouldReturnNil_WhenInvalidJson() {
-        XCTAssertNil(JsonParser.from(path: "testFile", ofType: AllStatusCode.self))
+        XCTAssertNil(JsonParser.from(path: "InvalidFile", ofType: AllStatusCode.self))
     }
     
     func testFrom_ShouldReturnNil_WhenInvalidCodable() {

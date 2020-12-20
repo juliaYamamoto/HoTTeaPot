@@ -26,6 +26,7 @@ class AllStatusCodeTest: XCTestCase {
     
     
     // MARK: - Set up and Tear down
+    
     override func setUp() {
         super.setUp()
         sut = fakeAllStatusCode
@@ -35,7 +36,9 @@ class AllStatusCodeTest: XCTestCase {
         super.tearDown()
     }
     
+    
     // MARK: - Test: Initialization
+    
     func testInit_ShouldNotBeNil() {
         XCTAssertNotNil(sut)
     }

@@ -17,6 +17,7 @@
 		2395987E2583274200C05930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2395987C2583274200C05930 /* LaunchScreen.storyboard */; };
 		239598AF258327F000C05930 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239598AE258327F000C05930 /* StatusCode.swift */; };
 		23CDB57C258DCBDF0016A9E3 /* StatusCodeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CDB57B258DCBDF0016A9E3 /* StatusCodeDataService.swift */; };
+		23CDB585258F7E800016A9E3 /* StatusCodeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CDB584258F7E800016A9E3 /* StatusCodeViewControllerTest.swift */; };
 		23D9B75625897517009D5D81 /* StatusCodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B75525897517009D5D81 /* StatusCodeTest.swift */; };
 		23D9B761258975B7009D5D81 /* AllStatusCodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B760258975B7009D5D81 /* AllStatusCodeTest.swift */; };
 		23D9B77525897F57009D5D81 /* CodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B77425897F57009D5D81 /* CodeType.swift */; };
@@ -24,9 +25,9 @@
 		23D9B78F25898BDD009D5D81 /* CodeTypeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B78E25898BDD009D5D81 /* CodeTypeTest.swift */; };
 		23D9B799258990D3009D5D81 /* TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B798258990D3009D5D81 /* TestObject.swift */; };
 		23D9B7A22589C452009D5D81 /* JsonParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B7A12589C452009D5D81 /* JsonParserTest.swift */; };
-		23D9B7AC2589C91C009D5D81 /* TestFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D9B7AB2589C91C009D5D81 /* TestFile.json */; };
+		23D9B7AC2589C91C009D5D81 /* InvalidFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D9B7AB2589C91C009D5D81 /* InvalidFile.json */; };
 		23D9B7B42589CDFA009D5D81 /* httpStatusCode.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D9B7B32589CDFA009D5D81 /* httpStatusCode.json */; };
-		23D9B7B72589CE05009D5D81 /* TestFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D9B7AB2589C91C009D5D81 /* TestFile.json */; };
+		23D9B7B72589CE05009D5D81 /* InvalidFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 23D9B7AB2589C91C009D5D81 /* InvalidFile.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		2395988A2583274300C05930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		239598AE258327F000C05930 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		23CDB57B258DCBDF0016A9E3 /* StatusCodeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeDataService.swift; sourceTree = "<group>"; };
+		23CDB584258F7E800016A9E3 /* StatusCodeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeViewControllerTest.swift; sourceTree = "<group>"; };
 		23D9B75525897517009D5D81 /* StatusCodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeTest.swift; sourceTree = "<group>"; };
 		23D9B760258975B7009D5D81 /* AllStatusCodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStatusCodeTest.swift; sourceTree = "<group>"; };
 		23D9B77425897F57009D5D81 /* CodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeType.swift; sourceTree = "<group>"; };
@@ -61,7 +63,7 @@
 		23D9B78E25898BDD009D5D81 /* CodeTypeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTypeTest.swift; sourceTree = "<group>"; };
 		23D9B798258990D3009D5D81 /* TestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObject.swift; sourceTree = "<group>"; };
 		23D9B7A12589C452009D5D81 /* JsonParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParserTest.swift; sourceTree = "<group>"; };
-		23D9B7AB2589C91C009D5D81 /* TestFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestFile.json; sourceTree = "<group>"; };
+		23D9B7AB2589C91C009D5D81 /* InvalidFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InvalidFile.json; sourceTree = "<group>"; };
 		23D9B7B32589CDFA009D5D81 /* httpStatusCode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = httpStatusCode.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				23D9B797258990A6009D5D81 /* Mocks */,
+				23CDB581258F7E470016A9E3 /* Test Controllers */,
 				23D9B7A02589C3E6009D5D81 /* Test Utils */,
 				23D9B754258974BA009D5D81 /* Test Models */,
 				2395988A2583274300C05930 /* Info.plist */,
@@ -181,6 +184,14 @@
 			path = DataService;
 			sourceTree = "<group>";
 		};
+		23CDB581258F7E470016A9E3 /* Test Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				23CDB584258F7E800016A9E3 /* StatusCodeViewControllerTest.swift */,
+			);
+			path = "Test Controllers";
+			sourceTree = "<group>";
+		};
 		23D9B754258974BA009D5D81 /* Test Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +205,7 @@
 		23D9B797258990A6009D5D81 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				23D9B7AB2589C91C009D5D81 /* TestFile.json */,
+				23D9B7AB2589C91C009D5D81 /* InvalidFile.json */,
 				23D9B798258990D3009D5D81 /* TestObject.swift */,
 			);
 			path = Mocks;
@@ -289,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2395987E2583274200C05930 /* LaunchScreen.storyboard in Resources */,
-				23D9B7B72589CE05009D5D81 /* TestFile.json in Resources */,
+				23D9B7B72589CE05009D5D81 /* InvalidFile.json in Resources */,
 				2395987B2583274200C05930 /* Assets.xcassets in Resources */,
 				23D9B7B42589CDFA009D5D81 /* httpStatusCode.json in Resources */,
 				239598792583273F00C05930 /* Main.storyboard in Resources */,
@@ -300,7 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23D9B7AC2589C91C009D5D81 /* TestFile.json in Resources */,
+				23D9B7AC2589C91C009D5D81 /* InvalidFile.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +341,7 @@
 				23D9B75625897517009D5D81 /* StatusCodeTest.swift in Sources */,
 				23D9B7A22589C452009D5D81 /* JsonParserTest.swift in Sources */,
 				23D9B78F25898BDD009D5D81 /* CodeTypeTest.swift in Sources */,
+				23CDB585258F7E800016A9E3 /* StatusCodeViewControllerTest.swift in Sources */,
 				23D9B799258990D3009D5D81 /* TestObject.swift in Sources */,
 				23D9B761258975B7009D5D81 /* AllStatusCodeTest.swift in Sources */,
 			);
