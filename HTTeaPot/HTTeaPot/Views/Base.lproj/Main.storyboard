@@ -3,10 +3,16 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoSlab-VariableFont_wght.ttf">
+            <string>RobotoSlab-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="fdg-cl-X5n">
@@ -15,6 +21,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FBo-yA-lGx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="18"/>
+                            <color key="textColor" name="GrayTitle"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="24"/>
+                            <color key="textColor" name="GrayTitle"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="8oB-QW-p7D" kind="relationship" relationship="rootViewController" id="eEf-Ig-xST"/>
@@ -35,6 +49,44 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G9c-XH-gpV">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatusCodeCell" id="g1Y-Ch-xhM" customClass="StatusCodeTableViewCell" customModule="HTTeaPot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g1Y-Ch-xhM" id="Qwf-wd-zL3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Goh-nr-VH8" userLabel="CodeLabel">
+                                                    <rect key="frame" x="16" y="10.5" width="26.5" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNE-t5-bBW" userLabel="TitleLabel">
+                                                    <rect key="frame" x="60" y="10.5" width="225" height="22.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="Bue-gE-SQ1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Goh-nr-VH8" firstAttribute="centerY" secondItem="Qwf-wd-zL3" secondAttribute="centerY" id="39U-wQ-jGA"/>
+                                                <constraint firstAttribute="trailing" secondItem="sNE-t5-bBW" secondAttribute="trailing" constant="35" id="CAe-N4-CDa"/>
+                                                <constraint firstItem="sNE-t5-bBW" firstAttribute="centerY" secondItem="Qwf-wd-zL3" secondAttribute="centerY" id="dHg-Xj-Xie"/>
+                                                <constraint firstItem="sNE-t5-bBW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Goh-nr-VH8" secondAttribute="trailing" constant="8" symbolic="YES" id="wrm-iI-Xul"/>
+                                                <constraint firstItem="Goh-nr-VH8" firstAttribute="leading" secondItem="Qwf-wd-zL3" secondAttribute="leading" constant="16" id="zkL-aZ-JoN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="codeLabel" destination="Goh-nr-VH8" id="Nli-WO-eOw"/>
+                                            <outlet property="titleLabel" destination="sNE-t5-bBW" id="Nr6-ty-5dc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vay-Ly-9dr"/>
@@ -59,6 +111,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="GrayTitle">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

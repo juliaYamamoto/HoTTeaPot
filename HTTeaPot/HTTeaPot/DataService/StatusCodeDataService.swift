@@ -27,6 +27,16 @@ class StatusCodeDataService: NSObject, UITableViewDataSource, UITableViewDelegat
         }
         return nil
     }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        guard let sectionType = CodeType.getTypeFromOrder(number: section) else { return }
+        let colorName = getColorNameForType(sectionType)
+        
+        if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.textLabel?.textColor = UIColor(named: colorName)
+        }
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let typeNameOfSection = CodeType.getTypeFromOrder(number: section) {
@@ -38,16 +48,15 @@ class StatusCodeDataService: NSObject, UITableViewDataSource, UITableViewDelegat
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell().identifier, for: indexPath) as! StatusCodeTableViewCell
+        
         guard let typeNameOfSection = CodeType.getTypeFromOrder(number: indexPath.section) else {
             print("Something is wrong") //TODO - Better return
             return cell
         }
-
-        let element = allStatusCode.getAllOfType(typeNameOfSection.rawValue)[indexPath.row]
-        cell.textLabel?.text = "\(element.code) - \(element.title)"
-
+        
+        let statusCode = allStatusCode.getAllOfType(typeNameOfSection.rawValue)[indexPath.row]
+        cell.setupCellWith(statusCode: statusCode)
         return cell
     }
 }
