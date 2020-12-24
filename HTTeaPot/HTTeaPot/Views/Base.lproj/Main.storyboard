@@ -15,6 +15,9 @@
         <array key="RobotoSlab-Regular.ttf">
             <string>RobotoSlab-Regular</string>
         </array>
+        <array key="RobotoSlab-SemiBold.ttf">
+            <string>RobotoSlab-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Navigation Controller-->
@@ -70,7 +73,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNE-t5-bBW" userLabel="TitleLabel">
-                                                    <rect key="frame" x="64" y="10.5" width="240" height="23"/>
+                                                    <rect key="frame" x="64" y="10.5" width="240" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -112,10 +115,107 @@
             </objects>
             <point key="canvasLocation" x="2317.5" y="51.760563380281688"/>
         </scene>
+        <!--Details-->
+        <scene sceneID="HOW-5n-hFX">
+            <objects>
+                <viewController storyboardIdentifier="Details" title="Details" id="kHQ-Th-U9Q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zPw-1T-CUa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1xx informational" lineBreakMode="clip" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Eh-Hq-De8" userLabel="TypeLabel">
+                                <rect key="frame" x="24" y="52" width="272" height="14"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="12"/>
+                                <color key="textColor" name="GraySubtitle"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0E-0h-7Oc" userLabel="TitleView">
+                                <rect key="frame" x="24" y="24" width="272" height="26"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGU-Xc-uvt" userLabel="CodeLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="VSd-Cn-Dpu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="22"/>
+                                        <color key="textColor" name="PurpleTypeOne"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="continue" lineBreakMode="clip" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTE-PD-a89" userLabel="TitleLabel">
+                                        <rect key="frame" x="48" y="0.0" width="224" height="26"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="22"/>
+                                        <color key="textColor" name="GrayTitle"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="KTE-PD-a89" firstAttribute="leading" secondItem="PGU-Xc-uvt" secondAttribute="trailing" constant="8" symbolic="YES" id="2pJ-Xf-VA5"/>
+                                    <constraint firstItem="KTE-PD-a89" firstAttribute="top" secondItem="L0E-0h-7Oc" secondAttribute="top" id="A8H-lW-CxM"/>
+                                    <constraint firstItem="KTE-PD-a89" firstAttribute="centerY" secondItem="L0E-0h-7Oc" secondAttribute="centerY" id="Cjb-cB-p2f"/>
+                                    <constraint firstItem="PGU-Xc-uvt" firstAttribute="top" secondItem="L0E-0h-7Oc" secondAttribute="top" id="HPI-gl-Vpn"/>
+                                    <constraint firstItem="PGU-Xc-uvt" firstAttribute="centerY" secondItem="L0E-0h-7Oc" secondAttribute="centerY" id="SC6-Et-6qy"/>
+                                    <constraint firstAttribute="trailing" secondItem="KTE-PD-a89" secondAttribute="trailing" id="sl8-Yn-ShW"/>
+                                    <constraint firstItem="PGU-Xc-uvt" firstAttribute="leading" secondItem="L0E-0h-7Oc" secondAttribute="leading" id="xFw-xN-y9L"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYo-w7-Yjx" userLabel="DescriptionLabel">
+                                <rect key="frame" x="24" y="90" width="272" height="112"/>
+                                <string key="text">The initial part of a request has been received and has not yet been rejected by the server. The server intends to send a final response after the request has been fully received and acted upon.</string>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="16"/>
+                                <color key="textColor" name="PurpleTypeOne"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RFC7231 Section 6.1.1" lineBreakMode="clip" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRP-OS-E12" userLabel="SourceLabel">
+                                <rect key="frame" x="24" y="498" width="272" height="14"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="12"/>
+                                <color key="textColor" name="GraySubtitle"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZN-qB-Q3A" userLabel="OkButton">
+                                <rect key="frame" x="24" y="518" width="272" height="38"/>
+                                <color key="backgroundColor" name="PurpleTypeOne"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="22"/>
+                                <state key="normal" title="ok">
+                                    <color key="titleColor" name="GraySubtitle"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LQZ-2t-dtv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FYo-w7-Yjx" firstAttribute="top" secondItem="8Eh-Hq-De8" secondAttribute="bottom" constant="24" id="0ca-pn-yX2"/>
+                            <constraint firstItem="LQZ-2t-dtv" firstAttribute="bottom" secondItem="NZN-qB-Q3A" secondAttribute="bottom" constant="12" id="12m-as-ZIC"/>
+                            <constraint firstItem="FYo-w7-Yjx" firstAttribute="leading" secondItem="LQZ-2t-dtv" secondAttribute="leading" constant="24" id="5ce-Oj-xaA"/>
+                            <constraint firstItem="NZN-qB-Q3A" firstAttribute="leading" secondItem="LQZ-2t-dtv" secondAttribute="leading" constant="24" id="6Qp-IZ-u13"/>
+                            <constraint firstItem="8Eh-Hq-De8" firstAttribute="top" secondItem="L0E-0h-7Oc" secondAttribute="bottom" constant="2" id="AjC-AB-raM"/>
+                            <constraint firstItem="8Eh-Hq-De8" firstAttribute="leading" secondItem="LQZ-2t-dtv" secondAttribute="leading" constant="24" id="HNI-Jv-PlH"/>
+                            <constraint firstItem="LQZ-2t-dtv" firstAttribute="trailing" secondItem="FRP-OS-E12" secondAttribute="trailing" constant="24" id="M7w-JO-gRU"/>
+                            <constraint firstItem="LQZ-2t-dtv" firstAttribute="trailing" secondItem="8Eh-Hq-De8" secondAttribute="trailing" constant="24" id="Xfc-lS-e9E"/>
+                            <constraint firstItem="NZN-qB-Q3A" firstAttribute="top" secondItem="FRP-OS-E12" secondAttribute="bottom" constant="6" id="aDJ-u9-oeJ"/>
+                            <constraint firstItem="L0E-0h-7Oc" firstAttribute="leading" secondItem="LQZ-2t-dtv" secondAttribute="leading" constant="24" id="b5d-lh-18d"/>
+                            <constraint firstItem="L0E-0h-7Oc" firstAttribute="top" secondItem="LQZ-2t-dtv" secondAttribute="top" constant="24" id="h00-aq-7bj"/>
+                            <constraint firstItem="LQZ-2t-dtv" firstAttribute="trailing" secondItem="NZN-qB-Q3A" secondAttribute="trailing" constant="24" id="v6n-7a-YrW"/>
+                            <constraint firstItem="LQZ-2t-dtv" firstAttribute="trailing" secondItem="L0E-0h-7Oc" secondAttribute="trailing" constant="24" id="vLB-Lf-ojD"/>
+                            <constraint firstItem="FRP-OS-E12" firstAttribute="leading" secondItem="LQZ-2t-dtv" secondAttribute="leading" constant="24" id="wwz-9O-QrO"/>
+                            <constraint firstItem="LQZ-2t-dtv" firstAttribute="trailing" secondItem="FYo-w7-Yjx" secondAttribute="trailing" constant="24" id="yzA-Fo-93j"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vW8-wD-lFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3375" y="51.760563380281688"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="GraySubtitle">
+            <color red="0.83600002527236938" green="0.83600002527236938" blue="0.83600002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="GrayTitle">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PurpleTypeOne">
+            <color red="0.5130000114440918" green="0.41800001263618469" blue="0.71700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

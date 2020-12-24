@@ -22,6 +22,7 @@
 		23B756DC25941F5200011D3D /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23B756D42594180E00011D3D /* RobotoSlab-Regular.ttf */; };
 		23B756DD25941F5200011D3D /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23B756D22594180E00011D3D /* RobotoSlab-SemiBold.ttf */; };
 		23B756E32594EA4100011D3D /* ColorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B756E22594EA4100011D3D /* ColorTest.swift */; };
+		23B756E9259525C700011D3D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B756E8259525C700011D3D /* DetailsViewController.swift */; };
 		23CDB57C258DCBDF0016A9E3 /* StatusCodeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CDB57B258DCBDF0016A9E3 /* StatusCodeDataService.swift */; };
 		23CDB585258F7E800016A9E3 /* StatusCodeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CDB584258F7E800016A9E3 /* StatusCodeViewControllerTest.swift */; };
 		23D9B75625897517009D5D81 /* StatusCodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B75525897517009D5D81 /* StatusCodeTest.swift */; };
@@ -66,6 +67,7 @@
 		23B756D32594180E00011D3D /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
 		23B756D42594180E00011D3D /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
 		23B756E22594EA4100011D3D /* ColorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTest.swift; sourceTree = "<group>"; };
+		23B756E8259525C700011D3D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		23CDB57B258DCBDF0016A9E3 /* StatusCodeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeDataService.swift; sourceTree = "<group>"; };
 		23CDB584258F7E800016A9E3 /* StatusCodeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeViewControllerTest.swift; sourceTree = "<group>"; };
 		23D9B75525897517009D5D81 /* StatusCodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeTest.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				239598752583273F00C05930 /* StatusCodeViewController.swift */,
+				23B756E8259525C700011D3D /* DetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				23CDB57C258DCBDF0016A9E3 /* StatusCodeDataService.swift in Sources */,
 				23D9B77A25897F87009D5D81 /* AllStatusCode.swift in Sources */,
 				239598742583273F00C05930 /* SceneDelegate.swift in Sources */,
+				23B756E9259525C700011D3D /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
