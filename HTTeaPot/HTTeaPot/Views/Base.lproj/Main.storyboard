@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="RobotoSlab-Bold.ttf">
+            <string>RobotoSlab-Bold</string>
+        </array>
         <array key="RobotoSlab-Regular.ttf">
             <string>RobotoSlab-Regular</string>
         </array>
@@ -58,27 +61,27 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Goh-nr-VH8" userLabel="CodeLabel">
-                                                    <rect key="frame" x="16" y="10.5" width="26.5" height="22.5"/>
-                                                    <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="17"/>
+                                                    <rect key="frame" x="16" y="10.5" width="32" height="22.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="B7d-tQ-12L"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNE-t5-bBW" userLabel="TitleLabel">
-                                                    <rect key="frame" x="60" y="10.5" width="225" height="22.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="Bue-gE-SQ1"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="64" y="10.5" width="240" height="23"/>
                                                     <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Goh-nr-VH8" firstAttribute="centerY" secondItem="Qwf-wd-zL3" secondAttribute="centerY" id="39U-wQ-jGA"/>
-                                                <constraint firstAttribute="trailing" secondItem="sNE-t5-bBW" secondAttribute="trailing" constant="35" id="CAe-N4-CDa"/>
-                                                <constraint firstItem="sNE-t5-bBW" firstAttribute="centerY" secondItem="Qwf-wd-zL3" secondAttribute="centerY" id="dHg-Xj-Xie"/>
-                                                <constraint firstItem="sNE-t5-bBW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Goh-nr-VH8" secondAttribute="trailing" constant="8" symbolic="YES" id="wrm-iI-Xul"/>
-                                                <constraint firstItem="Goh-nr-VH8" firstAttribute="leading" secondItem="Qwf-wd-zL3" secondAttribute="leading" constant="16" id="zkL-aZ-JoN"/>
+                                                <constraint firstItem="Goh-nr-VH8" firstAttribute="leading" secondItem="Qwf-wd-zL3" secondAttribute="leading" constant="16" id="D3b-Y1-ngp"/>
+                                                <constraint firstAttribute="trailing" secondItem="sNE-t5-bBW" secondAttribute="trailing" constant="16" id="LSw-BI-0Qe"/>
+                                                <constraint firstItem="sNE-t5-bBW" firstAttribute="leading" secondItem="Goh-nr-VH8" secondAttribute="trailing" constant="16" id="Yan-no-fEQ"/>
+                                                <constraint firstItem="sNE-t5-bBW" firstAttribute="centerY" secondItem="Qwf-wd-zL3" secondAttribute="centerY" id="fwP-yu-l0o"/>
+                                                <constraint firstItem="Goh-nr-VH8" firstAttribute="centerY" secondItem="Qwf-wd-zL3" secondAttribute="centerY" id="ikg-9H-g8f"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

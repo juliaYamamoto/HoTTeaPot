@@ -23,7 +23,7 @@ class StatusCodeTableViewCell: UITableViewCell {
         
         codeLabel.text = statusCode.code
         codeLabel.textColor = UIColor(named: getColorNameForType(type))
-        codeLabel.font = UIFont(name: Constants.Font().robotoRegular, size: 17)
+        codeLabel.font = UIFont(name: Constants.Font().robotoBold, size: 17)
         
         titleLabel.text = statusCode.title
         titleLabel.font = UIFont(name: Constants.Font().robotoRegular, size: 17)
