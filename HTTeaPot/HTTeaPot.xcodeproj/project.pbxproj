@@ -16,9 +16,11 @@
 		2395987B2583274200C05930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2395987A2583274200C05930 /* Assets.xcassets */; };
 		2395987E2583274200C05930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2395987C2583274200C05930 /* LaunchScreen.storyboard */; };
 		239598AF258327F000C05930 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239598AE258327F000C05930 /* StatusCode.swift */; };
-		23B756C22593FF1000011D3D /* Roboto_Slab in Resources */ = {isa = PBXBuildFile; fileRef = 23B756C12593FF1000011D3D /* Roboto_Slab */; };
 		23B756C92594021E00011D3D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B756C82594021E00011D3D /* Color.swift */; };
 		23B756CD259407B600011D3D /* StatusCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B756CC259407B600011D3D /* StatusCodeTableViewCell.swift */; };
+		23B756DB25941F5200011D3D /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23B756D32594180E00011D3D /* RobotoSlab-Bold.ttf */; };
+		23B756DC25941F5200011D3D /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23B756D42594180E00011D3D /* RobotoSlab-Regular.ttf */; };
+		23B756DD25941F5200011D3D /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23B756D22594180E00011D3D /* RobotoSlab-SemiBold.ttf */; };
 		23CDB57C258DCBDF0016A9E3 /* StatusCodeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CDB57B258DCBDF0016A9E3 /* StatusCodeDataService.swift */; };
 		23CDB585258F7E800016A9E3 /* StatusCodeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CDB584258F7E800016A9E3 /* StatusCodeViewControllerTest.swift */; };
 		23D9B75625897517009D5D81 /* StatusCodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9B75525897517009D5D81 /* StatusCodeTest.swift */; };
@@ -57,9 +59,11 @@
 		239598842583274300C05930 /* HTTeaPotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTeaPotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2395988A2583274300C05930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		239598AE258327F000C05930 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
-		23B756C12593FF1000011D3D /* Roboto_Slab */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto_Slab; sourceTree = "<group>"; };
 		23B756C82594021E00011D3D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		23B756CC259407B600011D3D /* StatusCodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeTableViewCell.swift; sourceTree = "<group>"; };
+		23B756D22594180E00011D3D /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
+		23B756D32594180E00011D3D /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
+		23B756D42594180E00011D3D /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
 		23CDB57B258DCBDF0016A9E3 /* StatusCodeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeDataService.swift; sourceTree = "<group>"; };
 		23CDB584258F7E800016A9E3 /* StatusCodeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeViewControllerTest.swift; sourceTree = "<group>"; };
 		23D9B75525897517009D5D81 /* StatusCodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeTest.swift; sourceTree = "<group>"; };
@@ -188,7 +192,9 @@
 		23B756C52593FF1C00011D3D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				23B756C12593FF1000011D3D /* Roboto_Slab */,
+				23B756D32594180E00011D3D /* RobotoSlab-Bold.ttf */,
+				23B756D42594180E00011D3D /* RobotoSlab-Regular.ttf */,
+				23B756D22594180E00011D3D /* RobotoSlab-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -316,8 +322,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B756DB25941F5200011D3D /* RobotoSlab-Bold.ttf in Resources */,
+				23B756DC25941F5200011D3D /* RobotoSlab-Regular.ttf in Resources */,
+				23B756DD25941F5200011D3D /* RobotoSlab-SemiBold.ttf in Resources */,
 				2395987E2583274200C05930 /* LaunchScreen.storyboard in Resources */,
-				23B756C22593FF1000011D3D /* Roboto_Slab in Resources */,
 				23D9B7B72589CE05009D5D81 /* InvalidFile.json in Resources */,
 				2395987B2583274200C05930 /* Assets.xcassets in Resources */,
 				23D9B7B42589CDFA009D5D81 /* httpStatusCode.json in Resources */,

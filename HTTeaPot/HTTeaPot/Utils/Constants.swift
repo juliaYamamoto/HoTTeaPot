@@ -28,4 +28,10 @@ class Constants: NSObject {
         let identifier: String = "StatusCodeCell"
     }
     
+    public struct Font {
+        let robotoRegular: String = "RobotoSlab-Regular"
+        let robotoBold: String = "RobotoSlab-Bold"
+        let robotoSemiBold: String = "RobotoSlab-SemiBold"
+    }
+    
 }

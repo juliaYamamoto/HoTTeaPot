@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="RobotoSlab-VariableFont_wght.ttf">
+        <array key="RobotoSlab-Regular.ttf">
             <string>RobotoSlab-Regular</string>
         </array>
     </customFonts>

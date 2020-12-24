@@ -34,7 +34,11 @@ class StatusCodeDataService: NSObject, UITableViewDataSource, UITableViewDelegat
         let colorName = getColorNameForType(sectionType)
         
         if let headerView = view as? UITableViewHeaderFooterView {
-            headerView.textLabel?.textColor = UIColor(named: colorName)
+            guard let textLabel = headerView.textLabel else { return }
+            
+            textLabel.textColor = UIColor(named: colorName)
+            textLabel.font = UIFont(name: Constants.Font().robotoBold, size: 17)
+
         }
     }
 
