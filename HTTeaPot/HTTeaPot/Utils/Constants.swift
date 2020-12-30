@@ -21,7 +21,7 @@ class Constants: NSObject {
         let yellow: String = "YellowTypeFive"
         
         let grayTitle: String = "GrayTitle"
-        let grauSubtitle: String = "GraySubtitle"
+        let graySubtitle: String = "GraySubtitle"
     }
     
     public struct Cell {

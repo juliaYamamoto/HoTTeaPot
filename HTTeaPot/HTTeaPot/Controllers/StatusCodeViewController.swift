@@ -7,15 +7,18 @@
 
 import UIKit
 
-class StatusCodeViewController: UIViewController {
-    
+protocol ShowDetailsDelegate {
+    func presentDetailsWith(_ statusCode: StatusCode)
+}
+
+class StatusCodeViewController: UIViewController, ShowDetailsDelegate {
     
     // MARK: - Properties
     
     var allStatusCode = AllStatusCode(statusCode: [])
     
     
-    // MARK: - Properties
+    // MARK: - IBOutlet
     
     @IBOutlet weak var statusCodeTableView: UITableView!
     @IBOutlet var dataService: StatusCodeDataService!
@@ -27,6 +30,7 @@ class StatusCodeViewController: UIViewController {
         super.viewDidLoad()
         self.statusCodeTableView.delegate = dataService
         self.statusCodeTableView.dataSource = dataService
+        self.dataService.delegate = self
         
         fetchStatusList()
         updateTableView()
@@ -41,10 +45,22 @@ class StatusCodeViewController: UIViewController {
         }
     }
     
+    
     //MARK: - Table View
     
     func updateTableView() {
         self.dataService.allStatusCode = self.allStatusCode
         self.statusCodeTableView.reloadData()
+    }
+    
+    
+    
+    //MARK: - Show Details Delegate
+    func presentDetailsWith(_ statusCode: StatusCode) {
+        let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Details") as! DetailsViewController
+        
+        
+        self.present(detailsVC, animated: true, completion: nil)
+        detailsVC.setInformationsWith(statusCode)
     }
 }

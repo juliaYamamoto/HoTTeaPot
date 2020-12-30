@@ -118,17 +118,11 @@
         <!--Details-->
         <scene sceneID="HOW-5n-hFX">
             <objects>
-                <viewController storyboardIdentifier="Details" title="Details" id="kHQ-Th-U9Q" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Details" title="Details" id="kHQ-Th-U9Q" customClass="DetailsViewController" customModule="HTTeaPot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zPw-1T-CUa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1xx informational" lineBreakMode="clip" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Eh-Hq-De8" userLabel="TypeLabel">
-                                <rect key="frame" x="24" y="52" width="272" height="14"/>
-                                <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="12"/>
-                                <color key="textColor" name="GraySubtitle"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0E-0h-7Oc" userLabel="TitleView">
                                 <rect key="frame" x="24" y="24" width="272" height="26"/>
                                 <subviews>
@@ -166,6 +160,12 @@
                                 <color key="textColor" name="PurpleTypeOne"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1xx informational" lineBreakMode="clip" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Eh-Hq-De8" userLabel="TypeLabel">
+                                <rect key="frame" x="24" y="52" width="272" height="14"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="12"/>
+                                <color key="textColor" name="GraySubtitle"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RFC7231 Section 6.1.1" lineBreakMode="clip" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRP-OS-E12" userLabel="SourceLabel">
                                 <rect key="frame" x="24" y="498" width="272" height="14"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="12"/>
@@ -179,6 +179,9 @@
                                 <state key="normal" title="ok">
                                     <color key="titleColor" name="GraySubtitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="okClicked:" destination="kHQ-Th-U9Q" eventType="touchUpInside" id="W4I-7G-ckw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LQZ-2t-dtv"/>
@@ -201,6 +204,14 @@
                             <constraint firstItem="LQZ-2t-dtv" firstAttribute="trailing" secondItem="FYo-w7-Yjx" secondAttribute="trailing" constant="24" id="yzA-Fo-93j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="codeLabel" destination="PGU-Xc-uvt" id="z5V-ea-sZx"/>
+                        <outlet property="descriptionLabel" destination="FYo-w7-Yjx" id="RPn-d0-al0"/>
+                        <outlet property="okButton" destination="NZN-qB-Q3A" id="wzI-DL-Tzq"/>
+                        <outlet property="sourceLabel" destination="FRP-OS-E12" id="AKX-We-wLY"/>
+                        <outlet property="titleLabel" destination="KTE-PD-a89" id="oll-QA-6a2"/>
+                        <outlet property="typeLabel" destination="8Eh-Hq-De8" id="tdd-Rq-Scv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vW8-wD-lFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

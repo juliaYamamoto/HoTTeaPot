@@ -8,17 +8,23 @@
 import UIKit
 
 class StatusCodeTableViewCell: UITableViewCell {
-
+    
+    // MARK: - IBOutlet
+    
     @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // TODO
-    }
+    
+    // MARK: - Properties
+    
+    var statusCode: StatusCode!
+    
+    
+    // MARK: - Methods
     
     func setupCellWith(statusCode: StatusCode){
+        self.statusCode = statusCode
+        
         guard let type = CodeType.getTypeFromName(statusCode.type) else { return }
         
         codeLabel.text = statusCode.code

@@ -10,13 +10,14 @@ import UIKit
 
 class StatusCodeDataService: NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    
     // MARK: - Properties
     
     var allStatusCode = AllStatusCode(statusCode: [])
+    var delegate: ShowDetailsDelegate?
     
     
     // MARK: - TableView - Data Source
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return CodeType.count()
     }
@@ -62,5 +63,16 @@ class StatusCodeDataService: NSObject, UITableViewDataSource, UITableViewDelegat
         let statusCode = allStatusCode.getAllOfType(typeNameOfSection.rawValue)[indexPath.row]
         cell.setupCellWith(statusCode: statusCode)
         return cell
+    }
+    
+    
+    // MARK: - TableView - Delegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! StatusCodeTableViewCell
+        
+        if let delegate = delegate {
+            delegate.presentDetailsWith(cell.statusCode)
+        }
     }
 }
