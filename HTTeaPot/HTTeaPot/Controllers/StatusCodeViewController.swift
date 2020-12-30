@@ -7,11 +7,7 @@
 
 import UIKit
 
-protocol ShowDetailsDelegate {
-    func presentDetailsWith(_ statusCode: StatusCode)
-}
-
-class StatusCodeViewController: UIViewController, ShowDetailsDelegate {
+class StatusCodeViewController: UIViewController, UITableViewDelegate {
     
     // MARK: - Properties
     
@@ -28,9 +24,8 @@ class StatusCodeViewController: UIViewController, ShowDetailsDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.statusCodeTableView.delegate = dataService
+        self.statusCodeTableView.delegate = self
         self.statusCodeTableView.dataSource = dataService
-        self.dataService.delegate = self
         
         fetchStatusList()
         updateTableView()
@@ -54,13 +49,14 @@ class StatusCodeViewController: UIViewController, ShowDetailsDelegate {
     }
     
     
+    // MARK: - TableView - Delegate
     
-    //MARK: - Show Details Delegate
-    func presentDetailsWith(_ statusCode: StatusCode) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! StatusCodeTableViewCell
+        
         let detailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Details") as! DetailsViewController
-        
-        
         self.present(detailsVC, animated: true, completion: nil)
-        detailsVC.setInformationsWith(statusCode)
+        
+        detailsVC.setInformationsWith(cell.statusCode)
     }
 }

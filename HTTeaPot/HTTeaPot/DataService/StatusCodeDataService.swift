@@ -8,12 +8,11 @@
 import Foundation
 import UIKit
 
-class StatusCodeDataService: NSObject, UITableViewDataSource, UITableViewDelegate {
+class StatusCodeDataService: NSObject, UITableViewDataSource {
     
     // MARK: - Properties
     
     var allStatusCode = AllStatusCode(statusCode: [])
-    var delegate: ShowDetailsDelegate?
     
     
     // MARK: - TableView - Data Source
@@ -65,14 +64,4 @@ class StatusCodeDataService: NSObject, UITableViewDataSource, UITableViewDelegat
         return cell
     }
     
-    
-    // MARK: - TableView - Delegate
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! StatusCodeTableViewCell
-        
-        if let delegate = delegate {
-            delegate.presentDetailsWith(cell.statusCode)
-        }
-    }
 }

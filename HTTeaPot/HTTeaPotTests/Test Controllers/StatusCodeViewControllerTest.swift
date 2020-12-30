@@ -44,21 +44,24 @@ class StatusCodeViewControllerTest: XCTestCase {
     }
     
     
-    // MARK: - Test: Data Service
+    // MARK: - Test: Delegate
     
-    func testDataService_TableViewDataSource_ShouldNotBeNil() {
-        XCTAssertNotNil(sut.statusCodeTableView.dataSource)
-    }
-    
-    func testDataService_TableViewDataSource_ShouldNotBeOfCorrectType() {
-        XCTAssertTrue(sut.statusCodeTableView.dataSource is StatusCodeDataService)
-    }
-    
-    func testDataService_TableViewDelegate_ShouldNotBeNil() {
+    func testDelegate_TableViewDelegate_ShouldNotBeNil() {
         XCTAssertNotNil(sut.statusCodeTableView.delegate)
     }
     
-    func testDataService_TableViewDelegate_ShouldNotBeOfCorrectType() {
-        XCTAssertTrue(sut.statusCodeTableView.delegate is StatusCodeDataService)
+    func testDelegate_TableViewDelegate_ShouldNotBeOfCorrectType() {
+        XCTAssertTrue(sut.statusCodeTableView.delegate is StatusCodeViewController)
+    }
+    
+    
+    // MARK: - Test: Data Source
+    
+    func testDataSource_TableViewDataSource_ShouldNotBeNil() {
+        XCTAssertNotNil(sut.statusCodeTableView.dataSource)
+    }
+    
+    func testDataSource_TableViewDataSource_ShouldNotBeOfCorrectType() {
+        XCTAssertTrue(sut.statusCodeTableView.dataSource is StatusCodeDataService)
     }
 }

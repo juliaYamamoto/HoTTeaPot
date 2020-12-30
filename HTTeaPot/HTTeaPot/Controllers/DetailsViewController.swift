@@ -52,6 +52,7 @@ class DetailsViewController: UIViewController {
         self.okButton.layer.cornerRadius = 5
     }
     
+    
     // MARK: - IBAction
     
     @IBAction func okClicked(_ sender: UIButton) {
