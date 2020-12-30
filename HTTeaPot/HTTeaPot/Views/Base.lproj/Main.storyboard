@@ -87,6 +87,7 @@
                                                 <constraint firstItem="Goh-nr-VH8" firstAttribute="centerY" secondItem="Qwf-wd-zL3" secondAttribute="centerY" id="ikg-9H-g8f"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" hint="Click to see details"/>
                                         <connections>
                                             <outlet property="codeLabel" destination="Goh-nr-VH8" id="Nli-WO-eOw"/>
                                             <outlet property="titleLabel" destination="sNE-t5-bBW" id="Nr6-ty-5dc"/>

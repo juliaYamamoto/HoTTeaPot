@@ -27,21 +27,6 @@ class StatusCodeDataService: NSObject, UITableViewDataSource {
         }
         return nil
     }
-    
-//    willDispla
-//
-//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-//
-//        guard let sectionType = CodeType.getTypeFromOrder(number: section) else { return }
-//        let colorName = getColorNameForType(sectionType)
-//
-//        if let headerView = view as? UITableViewHeaderFooterView {
-//            guard let textLabel = headerView.textLabel else { return }
-//
-//            textLabel.textColor = UIColor(named: colorName)
-//            textLabel.font = UIFont(name: Constants.Font().robotoBold, size: 17)
-//        }
-//    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let typeNameOfSection = CodeType.getTypeFromOrder(number: section) {
