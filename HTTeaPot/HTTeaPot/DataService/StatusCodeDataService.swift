@@ -38,7 +38,6 @@ class StatusCodeDataService: NSObject, UITableViewDataSource {
             
             textLabel.textColor = UIColor(named: colorName)
             textLabel.font = UIFont(name: Constants.Font().robotoBold, size: 17)
-
         }
     }
 
@@ -63,5 +62,4 @@ class StatusCodeDataService: NSObject, UITableViewDataSource {
         cell.setupCellWith(statusCode: statusCode)
         return cell
     }
-    
 }
