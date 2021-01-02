@@ -125,10 +125,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0E-0h-7Oc" userLabel="TitleView">
-                                <rect key="frame" x="24" y="24" width="272" height="29.5"/>
+                                <rect key="frame" x="24" y="24" width="272" height="26"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGU-Xc-uvt" userLabel="CodeLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="59i-0U-xPk"/>
                                         </constraints>
@@ -137,7 +137,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="continue" lineBreakMode="clip" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTE-PD-a89" userLabel="TitleLabel">
-                                        <rect key="frame" x="46" y="0.0" width="226" height="29.5"/>
+                                        <rect key="frame" x="46" y="0.0" width="226" height="26"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="22"/>
                                         <color key="textColor" name="GrayTitle"/>
                                         <nil key="highlightedColor"/>
@@ -154,26 +154,26 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYo-w7-Yjx" userLabel="DescriptionLabel">
-                                <rect key="frame" x="24" y="95.5" width="272" height="127"/>
+                                <rect key="frame" x="24" y="90" width="272" height="112"/>
                                 <string key="text">The initial part of a request has been received and has not yet been rejected by the server. The server intends to send a final response after the request has been fully received and acted upon.</string>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="16"/>
                                 <color key="textColor" name="PurpleTypeOne"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1xx informational" lineBreakMode="clip" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Eh-Hq-De8" userLabel="TypeLabel">
-                                <rect key="frame" x="24" y="55.5" width="272" height="16"/>
+                                <rect key="frame" x="24" y="52" width="272" height="14"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="12"/>
                                 <color key="textColor" name="GraySubtitle"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RFC7231 Section 6.1.1" lineBreakMode="clip" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRP-OS-E12" userLabel="SourceLabel">
-                                <rect key="frame" x="24" y="492" width="272" height="16"/>
+                                <rect key="frame" x="24" y="498" width="272" height="14"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-SemiBold" family="Roboto Slab" pointSize="12"/>
                                 <color key="textColor" name="GraySubtitle"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZN-qB-Q3A" userLabel="OkButton">
-                                <rect key="frame" x="24" y="514" width="272" height="42"/>
+                                <rect key="frame" x="24" y="518" width="272" height="38"/>
                                 <color key="backgroundColor" name="PurpleTypeOne"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="22"/>
                                 <state key="normal" title="ok">
