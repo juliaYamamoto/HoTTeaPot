@@ -22,8 +22,8 @@ The json has the key **"statusCode"** and a list of elements as the value.
 &nbsp;&nbsp; **type:** type of the status code. *e.g.:4×× client error*. (That can be: *1xx informational, 2xx success, 3xx redirection, 4xx client error, 5xx server error*.)  
 &nbsp;&nbsp; **source:** reference code and section. *e.g.:RFC2324 Ssection 2.3.2*.    
 
-### General look - first draft
-This first draft was made using keynote.            
+### General look
+This first draft was made using keynote. The gifs were recorded using my iphone.            
 
 #### 🎨 Color
 Each type have a different color.     
