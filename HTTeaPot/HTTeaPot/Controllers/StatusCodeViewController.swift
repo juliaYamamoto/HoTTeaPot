@@ -96,19 +96,9 @@ class StatusCodeViewController: UIViewController, UITableViewDelegate, UISearchB
         else {
             self.filteredStatusCode = []
             
-            if Utilities.onlyContainsNumbers(searchText) {
-                for i in 0..<allCodes.count {
-                    if allCodes[i].contains(searchText) {
-                        self.filteredStatusCode.append(self.allStatusCode.statusCode[i])
-                    }
-                }
-            }
-            
-            else {
-                for i in 0..<allTitles.count {
-                    if allTitles[i].contains(searchText.lowercased()) {
-                        self.filteredStatusCode.append(self.allStatusCode.statusCode[i])
-                    }
+            for i in 0..<allStatusCode.statusCode.count {
+                if allCodes[i].contains(searchText) || allTitles[i].contains(searchText.lowercased()) {
+                    self.filteredStatusCode.append(self.allStatusCode.statusCode[i])
                 }
             }
             
