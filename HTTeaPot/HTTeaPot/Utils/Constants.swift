@@ -16,6 +16,7 @@ class Constants: NSObject {
     public struct Identifier {
         let mainStoryboard: String = "Main"
         let detailsVC: String = "Details"
+        
     }
     
     public struct ColorName {

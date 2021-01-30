@@ -31,8 +31,10 @@ class StatusCodeViewController: UIViewController, UITableViewDelegate, UISearchB
         self.statusCodeTableView.dataSource = dataService
         self.searchBar.delegate = self
         
+        setupSearchBar()
         fetchStatusList()
-        updateTableView()
+        updateTableView(allStatusCode.statusCode)
+        
     }
     
     
@@ -55,8 +57,8 @@ class StatusCodeViewController: UIViewController, UITableViewDelegate, UISearchB
     
     //MARK: - Table View
     
-    func updateTableView() {
-        self.dataService.allStatusCode = self.allStatusCode
+    func updateTableView(_ list: [StatusCode]) {
+        self.dataService.allStatusCode.statusCode = list
         self.statusCodeTableView.reloadData()
     }
     
@@ -85,12 +87,24 @@ class StatusCodeViewController: UIViewController, UITableViewDelegate, UISearchB
     }
     
     
+    
+    
     // MARK: - SearchBar - Delegate
+    
+    func setupSearchBar() {
+        // SearchBar text
+        let textFieldInsideUISearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideUISearchBar?.textColor = UIColor(named:Constants.ColorName().grayTitle)
+        textFieldInsideUISearchBar?.font = UIFont(name: Constants.Font().robotoBold, size: 17)
+
+        // SearchBar placeholder
+        let labelInsideUISearchBar = textFieldInsideUISearchBar!.value(forKey: "placeholderLabel") as? UILabel
+        labelInsideUISearchBar?.textColor = UIColor(named:Constants.ColorName().graySubtitle)
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
-            self.dataService.allStatusCode = self.allStatusCode
-            self.statusCodeTableView.reloadData()
+            updateTableView(allStatusCode.statusCode)
         }
         
         else {
@@ -102,8 +116,7 @@ class StatusCodeViewController: UIViewController, UITableViewDelegate, UISearchB
                 }
             }
             
-            self.dataService.allStatusCode.statusCode = self.filteredStatusCode
-            self.statusCodeTableView.reloadData()
+            updateTableView(self.filteredStatusCode)
         }
     }
 }
