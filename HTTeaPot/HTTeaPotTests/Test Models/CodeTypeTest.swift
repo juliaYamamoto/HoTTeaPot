@@ -22,28 +22,6 @@ class CodeTypeTest: XCTestCase {
     }
     
     
-    // MARK: - Test: getTypeFromOrder
-    
-    func testTypeFromOrder_ShouldReturnNotNil_ForNumbersBetween0And4() {
-        XCTAssertNotNil(CodeType.getTypeFromOrder(number: 0))
-        XCTAssertNotNil(CodeType.getTypeFromOrder(number: 1))
-        XCTAssertNotNil(CodeType.getTypeFromOrder(number: 2))
-        XCTAssertNotNil(CodeType.getTypeFromOrder(number: 3))
-        XCTAssertNotNil(CodeType.getTypeFromOrder(number: 4))
-    }
-    
-    func testTypeFromOrder_ShouldReturnNil_ForNumbersbiggerThen5() {
-        XCTAssertNil(CodeType.getTypeFromOrder(number: 5))
-    }
-    
-    func testTypeFromOrder_ShouldReturnCorrectValue_ForOrderNumber() {
-        XCTAssertEqual(CodeType.getTypeFromOrder(number: 0), CodeType.informational)
-        XCTAssertEqual(CodeType.getTypeFromOrder(number: 1), CodeType.success)
-        XCTAssertEqual(CodeType.getTypeFromOrder(number: 2), CodeType.redirection)
-        XCTAssertEqual(CodeType.getTypeFromOrder(number: 3), CodeType.clientError)
-        XCTAssertEqual(CodeType.getTypeFromOrder(number: 4), CodeType.serverError)
-    }
-    
     // MARK: - Test: getTypeFromName
     
     func testTypeFromName_ShouldNotReturnNil_ForExistingName() {

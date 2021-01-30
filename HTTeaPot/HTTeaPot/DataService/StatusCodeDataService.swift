@@ -13,34 +13,37 @@ class StatusCodeDataService: NSObject, UITableViewDataSource {
     // MARK: - Properties
     
     var allStatusCode = AllStatusCode(statusCode: [])
+    var sections: [String] = []
     
+    func getSections(){
+        var typeSet: Set<String> = []
+        for item in allStatusCode.statusCode {
+            typeSet.insert(item.type)
+        }
+        
+        self.sections = typeSet.sorted()
+    }
     
     // MARK: - TableView - Data Source
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return CodeType.count()
+        getSections()
+        return sections.count
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if let section = CodeType.getTypeFromOrder(number: section) {
-            return section.rawValue
-        }
-        return nil
+        return sections[section]
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let typeNameOfSection = CodeType.getTypeFromOrder(number: section) {
-            let elements = allStatusCode.getAllOfType(typeNameOfSection.rawValue)
-            return elements.count
-        }
-
-        return 0
+        let elements = allStatusCode.getAllOfType(self.sections[section])
+        return elements.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell().identifier, for: indexPath) as! StatusCodeTableViewCell
         
-        guard let typeNameOfSection = CodeType.getTypeFromOrder(number: indexPath.section) else {
+        guard let typeNameOfSection = CodeType.getTypeFromName(sections[indexPath.section]) else {
             print("Something is wrong") //TODO - Better return
             return cell
         }

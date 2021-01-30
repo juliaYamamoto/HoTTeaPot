@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Vo-9z-cfy">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -53,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G9c-XH-gpV">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="88" width="320" height="480"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatusCodeCell" id="g1Y-Ch-xhM" customClass="StatusCodeTableViewCell" customModule="HTTeaPot" customModuleProvider="target">
@@ -95,19 +96,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search by Code or Name" translatesAutoresizingMaskIntoConstraints="NO" id="WNt-Xc-Y7V">
+                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MXc-pg-amo"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vay-Ly-9dr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="G9c-XH-gpV" firstAttribute="trailing" secondItem="vay-Ly-9dr" secondAttribute="trailing" id="Fp5-GU-dpv"/>
-                            <constraint firstItem="G9c-XH-gpV" firstAttribute="top" secondItem="vay-Ly-9dr" secondAttribute="top" id="dMv-9Y-cnz"/>
-                            <constraint firstItem="G9c-XH-gpV" firstAttribute="leading" secondItem="vay-Ly-9dr" secondAttribute="leading" id="lN5-7X-3eD"/>
-                            <constraint firstItem="G9c-XH-gpV" firstAttribute="bottom" secondItem="vay-Ly-9dr" secondAttribute="bottom" id="oAU-yt-4er"/>
+                            <constraint firstItem="G9c-XH-gpV" firstAttribute="top" secondItem="WNt-Xc-Y7V" secondAttribute="bottom" id="0Ah-qS-eQG"/>
+                            <constraint firstItem="WNt-Xc-Y7V" firstAttribute="leading" secondItem="vay-Ly-9dr" secondAttribute="leading" id="9ds-oF-els"/>
+                            <constraint firstItem="WNt-Xc-Y7V" firstAttribute="top" secondItem="vay-Ly-9dr" secondAttribute="top" id="Ds0-jK-bz7"/>
+                            <constraint firstItem="WNt-Xc-Y7V" firstAttribute="trailing" secondItem="vay-Ly-9dr" secondAttribute="trailing" id="Y37-ig-3iD"/>
+                            <constraint firstItem="G9c-XH-gpV" firstAttribute="bottom" secondItem="vay-Ly-9dr" secondAttribute="bottom" id="eMX-jo-nZ8"/>
+                            <constraint firstItem="G9c-XH-gpV" firstAttribute="trailing" secondItem="vay-Ly-9dr" secondAttribute="trailing" id="nLc-S8-PaS"/>
+                            <constraint firstItem="G9c-XH-gpV" firstAttribute="leading" secondItem="vay-Ly-9dr" secondAttribute="leading" id="zw9-1A-fNV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Status Code" id="Tly-GA-XTm"/>
                     <connections>
                         <outlet property="dataService" destination="87l-XI-0Je" id="3LZ-Ix-1CU"/>
+                        <outlet property="searchBar" destination="WNt-Xc-Y7V" id="PWP-3B-m2K"/>
                         <outlet property="statusCodeTableView" destination="G9c-XH-gpV" id="XNe-9d-57K"/>
                     </connections>
                 </viewController>

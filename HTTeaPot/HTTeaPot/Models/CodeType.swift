@@ -20,13 +20,6 @@ enum CodeType: String, CaseIterable {
     
     // MARK: - Methods
     
-    static func getTypeFromOrder(number: Int) -> CodeType? {
-        if number < self.count() {
-            return CodeType.allCases[number]
-        }
-        return nil
-    }
-    
     static func getTypeFromName(_ name: String) -> CodeType? {
         if let type = CodeType(rawValue: name) {
             return type

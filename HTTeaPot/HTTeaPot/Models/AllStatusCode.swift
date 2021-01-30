@@ -11,7 +11,7 @@ struct AllStatusCode: Codable {
     
     // MARK: - Properties
     
-    let statusCode: [StatusCode]
+    var statusCode: [StatusCode]
     
     
     // MARK: - Methods

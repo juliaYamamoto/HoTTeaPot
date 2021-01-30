@@ -13,6 +13,11 @@ class Constants: NSObject {
         let fileName: String = "httpStatusCode"
     }
     
+    public struct Identifier {
+        let mainStoryboard: String = "Main"
+        let detailsVC: String = "Details"
+    }
+    
     public struct ColorName {
         let purple: String = "PurpleTypeOne"
         let blue: String = "BlueTypeTwo"
