@@ -15,13 +15,14 @@ class StatusCodeViewController: UIViewController, UITableViewDelegate, UISearchB
     var filteredStatusCode: [StatusCode] = []
     var allCodes: [String] = []
     var allTitles: [String] = []
+    let navigationSearchBar = UISearchBar()
+    
     
     // MARK: - IBOutlet
     
     @IBOutlet weak var statusCodeTableView: UITableView!
     @IBOutlet var dataService: StatusCodeDataService!
-    @IBOutlet weak var searchBar: UISearchBar!
-    
+
     
     // MARK: - Lifecycle
     
@@ -29,7 +30,6 @@ class StatusCodeViewController: UIViewController, UITableViewDelegate, UISearchB
         super.viewDidLoad()
         self.statusCodeTableView.delegate = self
         self.statusCodeTableView.dataSource = dataService
-        self.searchBar.delegate = self
         
         setupSearchBar()
         fetchStatusList()
@@ -87,20 +87,55 @@ class StatusCodeViewController: UIViewController, UITableViewDelegate, UISearchB
     }
     
     
+    // MARK: - Navigation Item
     
+    func updateNavigationBar(showingSerch: Bool){
+        if showingSerch {
+            navigationItem.leftBarButtonItem = nil
+            navigationItem.titleView = self.navigationSearchBar
+            
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped))
+            navigationItem.rightBarButtonItem?.tintColor = UIColor(named: Constants.ColorName().graySubtitle)
+            navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: Constants.Font().robotoBold, size: 17)!], for: .normal)
+        }
+        else {
+            navigationItem.rightBarButtonItem = nil
+            navigationItem.titleView = nil
+            
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchTapped))
+            navigationItem.leftBarButtonItem?.tintColor = UIColor(named: Constants.ColorName().grayTitle)
+        }
+    }
     
-    // MARK: - SearchBar - Delegate
+    @objc func searchTapped() {
+        updateNavigationBar(showingSerch: true)
+    }
+    
+    @objc func cancelTapped() {
+        navigationSearchBar.text = ""
+        updateTableView(allStatusCode.statusCode)
+        updateNavigationBar(showingSerch: false)
+    }
+    
+
+    // MARK: - SearchBar
     
     func setupSearchBar() {
-        // SearchBar text
-        let textFieldInsideUISearchBar = searchBar.value(forKey: "searchField") as? UITextField
-        textFieldInsideUISearchBar?.textColor = UIColor(named:Constants.ColorName().grayTitle)
-        textFieldInsideUISearchBar?.font = UIFont(name: Constants.Font().robotoBold, size: 17)
-
-        // SearchBar placeholder
-        let labelInsideUISearchBar = textFieldInsideUISearchBar!.value(forKey: "placeholderLabel") as? UILabel
-        labelInsideUISearchBar?.textColor = UIColor(named:Constants.ColorName().graySubtitle)
+        updateNavigationBar(showingSerch: false)
+        
+        let searchTextField = navigationSearchBar.value(forKey: "searchField") as? UITextField
+        searchTextField?.textColor = UIColor(named:Constants.ColorName().grayTitle)
+        searchTextField?.font = UIFont(name: Constants.Font().robotoBold, size: 17)
+        
+        let searchPlaceholderLabel = searchTextField?.value(forKey: "placeholderLabel") as? UILabel
+        searchPlaceholderLabel?.textColor = UIColor(named:Constants.ColorName().graySubtitle)
+        navigationSearchBar.placeholder = "search for Code or Name"
+        
+        navigationSearchBar.delegate = self
     }
+    
+    
+    // MARK: - SearchBar Delegate
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
