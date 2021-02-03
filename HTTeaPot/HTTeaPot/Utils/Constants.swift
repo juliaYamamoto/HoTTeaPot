@@ -34,6 +34,12 @@ class Constants: NSObject {
         let identifier: String = "StatusCodeCell"
     }
     
+    public struct SearchBar {
+        let searchFieldKey: String = "searchField"
+        let placeholderKey: String = "placeholderLabel"
+        let placeholder: String = "Search for Code or Name"
+    }
+    
     public struct Font {
         let robotoRegular: String = "RobotoSlab-Regular"
         let robotoBold: String = "RobotoSlab-Bold"

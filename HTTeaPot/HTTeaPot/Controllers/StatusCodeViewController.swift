@@ -123,13 +123,13 @@ class StatusCodeViewController: UIViewController, UITableViewDelegate, UISearchB
     func setupSearchBar() {
         updateNavigationBar(showingSerch: false)
         
-        let searchTextField = navigationSearchBar.value(forKey: "searchField") as? UITextField
+        let searchTextField = navigationSearchBar.value(forKey: Constants.SearchBar().searchFieldKey) as? UITextField
         searchTextField?.textColor = UIColor(named:Constants.ColorName().grayTitle)
         searchTextField?.font = UIFont(name: Constants.Font().robotoBold, size: 17)
         
-        let searchPlaceholderLabel = searchTextField?.value(forKey: "placeholderLabel") as? UILabel
+        let searchPlaceholderLabel = searchTextField?.value(forKey: Constants.SearchBar().placeholderKey) as? UILabel
         searchPlaceholderLabel?.textColor = UIColor(named:Constants.ColorName().graySubtitle)
-        navigationSearchBar.placeholder = "search for Code or Name"
+        navigationSearchBar.placeholder = Constants.SearchBar().placeholder
         
         navigationSearchBar.delegate = self
     }
